@@ -35,8 +35,10 @@ spring.thymeleaf.cache=false
 
 
 ### 1. Clone project
- ./mvnw spring-boot:run
- git clone https://github.com/tangphuong181/spring-boot-login-register.git
+ ./mvnw spring-boot:run  
+ 
+ git clone https://github.com/tangphuong181/spring-boot-login-register.git  
+ 
  cd spring-boot-login-register
 
 ### About Me
