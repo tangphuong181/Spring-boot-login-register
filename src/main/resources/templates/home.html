@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/" xmlns:sec="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Trang Chủ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+          crossorigin="anonymous">
+
+</head>
+<body>
+<div class="container">
+               <div class="row">
+                   <div class="col-sm-6">
+
+                   <h4> HOME</h4>
+
+                </div>
+                   <div class="col-sm-6">
+
+                     Xin Chào <b> <span sec:authentication="principal.username"></span></b>
+                       <br><span sec:authentication="principal.authorities"></span>
+                       <form action="#" th:action="@{/logout}" method="POST">
+                           <input type="submit" class="btn btn-info" value="Logout"></input>
+                       </form>
+                   </div>
+            </div>
+    <hr/>
+
+</div>
+  <div class="container">
+     <buton sec:authorize="hasAnyRole('ADMIN','MANAGER')" class="btn btn-warning">  Edit</buton>
+     <buton sec:authorize="hasRole('ADMIN')" class="btn btn-danger"> Xóa </buton>
+     <buton sec:authorize="hasAnyRole('ADMIN','MANAGER','TEACHER')" class="btn btn-success"> View </buton>
+  </div>
+
+<div class="page-wrapper" >
+    <div>
+
+<!--HIỂN THỊ FOOTER-->
+
+<!--<div th:replace="fragment/footer.html :: footer"></div>-->
+
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+</div>
+
+</body>
+
+
+
+
+</html>

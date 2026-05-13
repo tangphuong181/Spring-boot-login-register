@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login  </title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+
+</head>
+<body>
+
+                       <!--FORM INSERT VÀO -->
+<div class="login">
+    <img th:src="@{/img/login-bg.png}" alt="image" class="login__bg">
+
+    <form  th:action="@{/authenticateTheUser}" class="login__form" method="POST">
+
+<!--        Thông báo lỗi-->
+
+        <div th:if="${param.error}">
+            <span style = "color:red">
+                Đăng Nhập Thất Bại, <br> Kiểm Tra Lại Tài Khoản.
+            </span>
+        </div>
+
+
+        <h1 class="login__title">Login</h1>
+
+        <div class="login__inputs">
+            <div class="login__box">
+                <input type="text" name = "username" placeholder="User ID" required class="login__input">
+                <i class="ri-mail-fill"></i>
+            </div>
+
+            <div class="login__box">
+                <input type="password" name ="password" placeholder="Password" required class="login__input">
+                <i class="ri-lock-2-fill"></i>
+            </div>
+        </div>
+
+        <div class="login__check">
+            <div class="login__check-box">
+                <input type="checkbox" class="login__check-input" id="user-check">
+                <label for="user-check" class="login__check-label">Remember me</label>
+            </div>
+
+            <a href="#" class="login__forgot">Forgot Password?</a>
+        </div>
+
+        <button type="submit" class="login__button">Login</button>
+
+
+
+        <div class="login__register">
+            Don't have an account? <a href="/register/register-form">Register</a>
+        </div>
+
+
+    </form>
+</div>
+                         <!--KẾT THÚC FORM -->
+
+<!--<div th:replace="fragment::footer">-->
+
+
+<!--</div>-->
+</body>
+
+
+</html>
