@@ -35,9 +35,9 @@ spring.thymeleaf.cache=false
 
 
 ### 1. Clone project
-# ./mvnw spring-boot:run
-# git clone https://github.com/tangphuong181/spring-boot-login-register.git
-# cd spring-boot-login-register
+ ./mvnw spring-boot:run
+ git clone https://github.com/tangphuong181/spring-boot-login-register.git
+ cd spring-boot-login-register
 
 ### About Me
  Hi, I'm Phuong (Tang Phuong) — a passionate Java Backend Developer from Vietnam.I specialize in developing web applications using Spring Boot framework, Spring Security, and SQL Server. This project was built to practice and master user authentication flow in Spring Boot
