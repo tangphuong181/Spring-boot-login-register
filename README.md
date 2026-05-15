@@ -24,9 +24,9 @@
 
 ## 🚀 Installation & Setup
 
-spring.datasource.url=jdbc:sqlserver://localhost:1433;databaseName=your_database_name;encrypt=true;trustServerCertificate=true
-spring.datasource.username=sa
-spring.datasource.password=your_password
+spring.datasource.url=jdbc:sqlserver://localhost:1433;databaseName=your_database_name;encrypt=true;trustServerCertificate=true  
+spring.datasource.username=sa  
+spring.datasource.password=your_password  
 
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
